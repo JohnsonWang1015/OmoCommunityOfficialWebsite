@@ -1,0 +1,1 @@
+const BASE_URL = process.env.NEXT_PUBLIC_BACKSTAGE_URL;
