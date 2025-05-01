@@ -50,3 +50,5 @@ bun.lockb
 .idea/
 .vscode/
 .cursorrules
+
+/certs

@@ -2,9 +2,9 @@ module.exports = {
     apps: [
         {
             name: "OmoCommnuityOfficialWebsite",
-            script: "bun",
-            args: "start",
-            cwd: "./",
+            script: "./server.js",
+            exec_mode: "fork",
+            instances: "1",
             env: {
                 NODE_ENV: "production",
                 PORT: 4000,

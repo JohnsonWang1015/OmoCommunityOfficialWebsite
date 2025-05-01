@@ -3,7 +3,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    metadataBase: new URL("https://promap.topedu.io:5173/"),
+    metadataBase: new URL("https://promap.topedu.io:4000/"),
     title: {
         default: "塭內社區官方網站",
         template: "%s | 塭內社區官方網站",
@@ -23,7 +23,7 @@ export const metadata = {
         images: "/images/logo.png",
         title: "塭內社區官方網站",
         description: "苗栗縣竹南鎮塭內社區官方網站",
-        url: "https://promap.topedu.io:5173/",
+        url: "https://promap.topedu.io:4000/",
         siteName: "塭內社區官方網站",
         locale: "zh-TW",
         type: "website",
