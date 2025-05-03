@@ -8,8 +8,14 @@ const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
 const httpsOptions = {
-    key: fs.readFileSync(path.join(__dirname, "certs/privkey.pem")),
-    cert: fs.readFileSync(path.join(__dirname, "certs/fullchain.pem")),
+    key: fs.readFileSync(
+        "/etc/letsencrypt/live/promap.topedu.io/privkey.pem",
+        "utf8"
+    ),
+    cert: fs.readFileSync(
+        "/etc/letsencrypt/live/promap.topedu.io/fullchain.pem",
+        "utf8"
+    ),
 };
 
 app.prepare().then(() => {
