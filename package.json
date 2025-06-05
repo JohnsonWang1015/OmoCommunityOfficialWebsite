@@ -4,7 +4,7 @@
     "private": true,
     "license": "MIT",
     "scripts": {
-        "dev": "bun --bun next dev --turbopack",
+        "dev": "bunx next dev --turbopack",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
@@ -58,7 +58,9 @@
         "react-hook-form": "^7.55.0",
         "react-icons": "^5.5.0",
         "react-resizable-panels": "^2.1.7",
+        "react-slick": "^0.30.3",
         "recharts": "^2.15.1",
+        "slick-carousel": "^1.8.1",
         "sonner": "^2.0.2",
         "sweetalert2": "^11.17.2",
         "tailwind-merge": "^3.0.2",

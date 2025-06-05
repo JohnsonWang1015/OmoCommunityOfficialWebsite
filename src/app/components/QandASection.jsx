@@ -7,7 +7,7 @@ import {
     AccordionItem,
     AccordionTrigger,
     AccordionContent,
-} from "./ui/accordion";
+} from "../../components/ui/accordion";
 
 const qnaList = [
     {

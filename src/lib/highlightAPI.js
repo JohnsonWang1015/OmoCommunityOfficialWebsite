@@ -1,11 +1,11 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BACKSTAGE_URL;
 
-export async function getPageContent(slug) {
+export async function getAllHighlights() {
     try {
-        const response = await fetch(`${BASE_URL}/api/v1/page/${slug}`, {
-            method: 'GET',
+        const response = await fetch(`${BASE_URL}/api/v1/highlights`, {
+            method: "GET",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
         });
 
@@ -15,8 +15,7 @@ export async function getPageContent(slug) {
 
         return await response.json();
     } catch (error) {
-        console.error('Error fetching history:', error);
-        throw error;
+        console.error(`取得亮點資料發生錯誤: ${error}`);
+        return [];
     }
 }
-

@@ -59,7 +59,7 @@ export default function Hero() {
     return (
         <section
             ref={ref}
-            className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-black"
+            className="relative h-[100dvh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black"
         >
             {/* 輪播區塊 */}
             <AnimatePresence initial={false}>
@@ -76,20 +76,30 @@ export default function Hero() {
                     }}
                 >
                     {banners.length > 0 && banners[currentBanner]?.url && (
-                        <Image
-                            role="img"
-                            aria-label={
-                                banners[currentBanner].title || "Banner"
+                        <div>
+                            {
+                                !imageLoaded && (
+                                    <div className="absolute inset-0 bg-gray-100 animate-pulse z-0" />
+                                )
                             }
-                            src={banners[currentBanner].url}
-                            alt={banners[currentBanner].title || "Banner"}
-                            fill
-                            priority
-                            className="object-cover object-center brightness-90 transition-opacity duration-500"
-                            sizes="100vw"
-                            quality={90}
-                            onLoadingComplete={() => setImageLoaded(true)}
-                        />
+                            <Image
+                                role="img"
+                                aria-label={
+                                    banners[currentBanner].title || "Banner"
+                                }
+                                src={banners[currentBanner].url}
+                                alt={banners[currentBanner].title || "Banner"}
+                                fill
+                                priority={currentBanner === 0}
+                                loading={currentBanner === 0 ? "eager" : "lazy"}
+                                className={`object-cover object-center brightness-90 transition-opacity duration-700 ${
+                                    imageLoaded ? "opacity-100" : "opacity-0"
+                                }`}
+                                sizes="(max-width: 768px) 100vw, 1920px"
+                                quality={90}
+                                onLoadingComplete={() => setImageLoaded(true)}
+                            />
+                        </div>
                     )}
                     {/* 暗角與漸層濾鏡 */}
                     <div className="absolute inset-0 bg-gradient-to-br from-green-950/60 via-green-800/40 to-transparent z-10 mix-blend-multiply"></div>
@@ -135,16 +145,16 @@ export default function Hero() {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://promap.topedu.io:3000/"
-                            className="px-8 py-3 text-lg font-bold text-white rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300"
+                            className="px-12 py-3 text-lg font-bold text-white rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300"
                         >
                             🌿 生態導覽
                         </Link>
-                        <Link
-                            href="/culture"
-                            className="px-8 py-3 text-lg font-bold text-white rounded-full bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all shadow-inner hover:shadow-md focus:outline-none focus:ring-4 focus:ring-white/30"
-                        >
-                            🏡 文化導覽
-                        </Link>
+                        {/*<Link*/}
+                        {/*    href="/culture"*/}
+                        {/*    className="px-8 py-3 text-lg font-bold text-white rounded-full bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all shadow-inner hover:shadow-md focus:outline-none focus:ring-4 focus:ring-white/30"*/}
+                        {/*>*/}
+                        {/*    🏡 文化導覽*/}
+                        {/*</Link>*/}
                     </div>
                 </motion.div>
             </AnimatePresence>

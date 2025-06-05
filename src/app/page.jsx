@@ -1,12 +1,13 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/app/components/Navbar";
 import { motion } from "framer-motion";
 import { theme } from "@/styles/theme";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import TabsSection from "@/components/TabsSection";
-import QandASection from "@/components/QandASection";
+import Footer from "@/app/components/Footer";
+import Hero from "@/app/components/Hero";
+import TabsSection from "@/app/components/TabsSection";
+import HighlightSection from "@/app/components/HighlightSection";
+import QandASection from "@/app/components/QandASection";
 
 export default function HomePage() {
     return (
@@ -19,7 +20,8 @@ export default function HomePage() {
             <Navbar />
             <Hero />
             {/* 嵌入 YouTube 區塊 */}
-            <section className="py-16 px-4 md:px-8 bg-white/70 backdrop-blur-sm">
+            <section className="py-16 px-4 md:px-8 bg-white/70 backdrop-blur-sm"
+                     aria-label="社區介紹影片" role="region">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
                         社區介紹影片
@@ -75,6 +77,7 @@ export default function HomePage() {
                 </div>
             </section>
 
+            <HighlightSection />
             <QandASection />
             <Footer />
         </main>

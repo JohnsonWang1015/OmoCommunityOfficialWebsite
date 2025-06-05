@@ -153,14 +153,14 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="mt-8 md:mt-6 flex justify-center md:justify-end">
-                            <a
-                                href="#top"
+                            <button
+                                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                                 title="回頂部"
                                 aria-label="回頂部"
                                 className="text-white/70 hover:text-white transition-transform hover:scale-125"
                             >
                                 <FaArrowUp className="w-6 h-6" />
-                            </a>
+                            </button>
                         </div>
                     </motion.div>
                 </div>

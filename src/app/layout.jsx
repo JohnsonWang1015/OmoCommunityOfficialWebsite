@@ -59,7 +59,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
     return (
         <html lang="zh-TW">
-            <body className={inter.className}>
+            <body className={`${inter.className} antialiased text-gray-800`}>
                 <div id="top">{children}</div>
             </body>
         </html>

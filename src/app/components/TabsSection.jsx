@@ -1,10 +1,11 @@
 "use client";
 
 import { theme } from "@/styles/theme";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { getAllNotices } from "@/lib/noticeAPI";
+import { getAllNews } from "@/lib/newsAPI";
 import Link from "next/link";
 
 export default function TabsSection() {
@@ -27,9 +28,23 @@ export default function TabsSection() {
                 console.error(`取得公告發生錯誤: ${err}`);
                 setAnnouncementsList([]);
             });
+        getAllNews()
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    const news = data.slice(0, 5);
+                    setEventsList(news);
+                } else {
+                    console.error("API 回傳格式錯誤", data);
+                    setEventsList([]);
+                }
+            })
+            .catch((err) => {
+                console.error(`取得活動發生錯誤: ${err}`);
+                setEventsList([]);
+            });
     }, []);
 
-    const renderNoticeList = (list) => (
+    const renderList = (category, list) => (
         <motion.div
             initial="hidden"
             animate="visible"
@@ -41,7 +56,7 @@ export default function TabsSection() {
             {list.map((item) => (
                 <Link
                     key={item.id}
-                    href={`/notices/${item.id}`}
+                    href={category === "notice" ? `/notices/${item.id}` : `/events/${item.id}`}
                     className="space-y-3"
                 >
                     <motion.div
@@ -83,10 +98,10 @@ export default function TabsSection() {
             {list.length > 0 ? (
                 <div className="mt-4 text-end">
                     <Link
-                        href="/notices"
+                        href={category === "notice" ? "/notices" : "/events"}
                         className="text-md text-secondary-main hover:underline font-semibold"
                     >
-                        查看更多公告 →
+                        查看更多{category === "notice" ? "公告" : "活動"} →
                     </Link>
                 </div>
             ) : (
@@ -141,8 +156,8 @@ export default function TabsSection() {
                                 transition={{ duration: 0.3 }}
                             >
                                 {currentTab === "news"
-                                    ? renderNoticeList(announcementsList)
-                                    : renderNoticeList(eventsList)}
+                                    ? renderList("notice", announcementsList)
+                                    : renderList("event", eventsList)}
                             </motion.div>
                         </AnimatePresence>
                     </div>

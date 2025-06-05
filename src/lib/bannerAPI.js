@@ -1,7 +1,9 @@
+const BASE_URL = process.env.NEXT_PUBLIC_BACKSTAGE_URL;
+
 export async function getAllBanners() {
     try {
         const res = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKSTAGE_URL}/api/v1/banners`,
+            `${BASE_URL}/api/v1/banners`,
             {
                 credentials: "include",
             }

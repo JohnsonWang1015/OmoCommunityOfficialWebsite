@@ -1,15 +1,15 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BACKSTAGE_URL;
 
-export async function getAllNotices() {
+export async function getAllNews() {
     try {
         const response = await fetch(
-            `${BASE_URL}/api/v1/announcement`,
+            `${BASE_URL}/api/v1/news`,
             {
                 credentials: "include",
             }
         );
         if (!response.ok) {
-            throw new Error("取得公告失敗");
+            throw new Error("取得活動列表失敗");
         }
         return response.json();
     } catch (error) {
@@ -17,16 +17,16 @@ export async function getAllNotices() {
     }
 }
 
-export async function getNoticeById(id) {
+export async function getNewsById(id) {
     try {
         const response = await fetch(
-            `${BASE_URL}/api/v1/announcement/${id}`,
+            `${BASE_URL}/api/v1/news/${id}`,
             {
                 credentials: "include",
             }
         );
         if (!response.ok) {
-            throw new Error("取得公告失敗");
+            throw new Error("取得活動失敗");
         }
 
         const data = await response.json();

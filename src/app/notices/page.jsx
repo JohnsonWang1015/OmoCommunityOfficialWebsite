@@ -1,21 +1,19 @@
 "use client";
 
-import ArticleList from "@/components/ArticleList";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import ArticleList from "@/app/components/ArticleList";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 import { theme } from "@/styles/theme";
 
 export default function NoticesPage() {
     return (
         <main
-            className="min-h-screen flex flex-col"
+            className="flex flex-col"
             style={{
-                background: `linear-gradient(to bottom, ${theme.colors.background.warm} 0%, ${theme.colors.background.nature} 100%)`,
+                background: theme.gradients.secondary,
             }}
         >
-            <Navbar />
             <ArticleList />
-            <Footer />
         </main>
     );
 }

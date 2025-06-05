@@ -1,48 +1,48 @@
 export const theme = {
     colors: {
         primary: {
-            // 溫暖的黃色系
-            main: "#F4A940", // 主要黃色
-            light: "#FFD180", // 淺黃色
-            dark: "#E67E22", // 深黃色
-            contrast: "#FFFFFF", // 對比色（文字）
+            // 琥珀金：社區代表色（溫暖）
+            main: "#F5A623",       // Amber Gold
+            light: "#FFD48A",      // 淺金色
+            dark: "#D9822B",       // 深琥珀
+            contrast: "#FFFFFF",   // 對比色
         },
         secondary: {
-            // 自然綠色系
-            main: "#2E7D32", // 主要綠色
-            light: "#4CAF50", // 淺綠色
-            dark: "#1B5E20", // 深綠色
-            contrast: "#FFFFFF", // 對比色（文字）
+            // 森林綠：代表永續與自然
+            main: "#2E7D4F",       // 中森林綠
+            light: "#81C784",      // 嫩芽綠
+            dark: "#1B5E20",       // 深森林
+            contrast: "#FFFFFF",   // 對比色
         },
         accent: {
-            // 海洋藍色系
-            main: "#0288D1", // 主要藍色
-            light: "#03A9F4", // 淺藍色
-            dark: "#01579B", // 深藍色
-            contrast: "#FFFFFF", // 對比色（文字）
+            // 湖水藍：象徵透明、信任、科技
+            main: "#00B8D4",       // 湖水藍
+            light: "#4DD0E1",      // 淺水藍
+            dark: "#008394",       // 深藍綠
+            contrast: "#FFFFFF",
         },
         text: {
-            primary: "#333333", // 主要文字顏色
-            secondary: "#666666", // 次要文字顏色
-            light: "#FFFFFF", // 淺色文字
+            primary: "#263238",     // 暗藍灰，比純黑溫和
+            secondary: "#607D8B",   // 藍灰色，內文佳
+            light: "#FFFFFF",
         },
         background: {
-            main: "#FFFFFF", // 主要背景
-            light: "#F5F5F5", // 淺色背景
-            warm: "#FFF8E1", // 溫暖色背景
-            nature: "#F1F8E9", // 自然色背景
-            warmLight: "#FDFDF7", // 溫暖淺色背景
+            main: "#FFFFFF",
+            light: "#F9FAFB",        // 簡約留白背景
+            warm: "#FFF8E1",         // 保留暖色可用於 hero
+            nature: "#E8F5E9",       // 淺綠背景，呼吸感
+            warmLight: "#FDFDF7",
         },
     },
     gradients: {
-        primary: "linear-gradient(135deg, #F4A940 0%, #FFD180 100%)",
-        secondary: "linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%)",
-        accent: "linear-gradient(135deg, #0288D1 0%, #03A9F4 100%)",
-        hero: "linear-gradient(180deg, rgba(46, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.8) 100%)",
+        primary: "linear-gradient(135deg, #F5A623 0%, #FFD48A 100%)",
+        secondary: "linear-gradient(135deg, #2E7D4F 0%, #81C784 100%)",
+        accent: "linear-gradient(135deg, #00B8D4 0%, #4DD0E1 100%)",
+        hero: "linear-gradient(180deg, rgba(46, 125, 79, 0.9) 0%, rgba(27, 94, 32, 0.8) 100%)",
     },
     shadows: {
-        small: "0 2px 4px rgba(0,0,0,0.1)",
-        medium: "0 4px 6px rgba(0,0,0,0.1)",
-        large: "0 8px 16px rgba(0,0,0,0.1)",
+        small: "0 2px 4px rgba(0,0,0,0.08)",
+        medium: "0 4px 8px rgba(0,0,0,0.1)",
+        large: "0 12px 24px rgba(0,0,0,0.12)",
     },
 };
