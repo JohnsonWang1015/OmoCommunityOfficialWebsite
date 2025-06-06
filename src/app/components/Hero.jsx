@@ -145,7 +145,7 @@ export default function Hero() {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://promap.topedu.io:3000/"
-                            className="px-12 py-3 text-lg font-bold text-white rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300"
+                            className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300"
                         >
                             🌿 生態導覽
                         </Link>
