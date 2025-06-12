@@ -86,7 +86,7 @@ export default function TabsSection() {
                         <div
                             className={`font-semibold text-lg md:text-xl hover:underline`}
                             style={{
-                                color: theme.colors.secondary.main,
+                                color: theme.colors.accent.dark,
                                 textDecoration: "none",
                             }}
                         >
@@ -121,15 +121,15 @@ export default function TabsSection() {
                     <TabsList
                         className="grid grid-cols-2 w-full text-center rounded-t-xl overflow-hidden relative z-10 !h-auto !min-h-[64px] !p-0"
                         style={{
-                            backgroundColor: theme.colors.secondary.main,
+                            backgroundColor: theme.colors.accent.main,
                         }}
                     >
                         <TabsTrigger
                             value="news"
                             className="text-white px-4 py-1 text-base md:text-lg font-semibold transition-all duration-300 w-full data-[state=active]:bg-[var(--active-bg)] data-[state=active]:text-[var(--active-text)]"
                             style={{
-                                "--active-bg": theme.colors.background.main,
-                                "--active-text": theme.colors.secondary.dark,
+                                "--active-bg": theme.colors.background.nature,
+                                "--active-text": theme.colors.accent.dark,
                             }}
                         >
                             最新公告
@@ -138,8 +138,8 @@ export default function TabsSection() {
                             value="events"
                             className="text-white px-4 py-1 text-base md:text-lg font-semibold transition-all duration-300 w-full data-[state=active]:bg-[var(--active-bg)] data-[state=active]:text-[var(--active-text)]"
                             style={{
-                                "--active-bg": theme.colors.background.main,
-                                "--active-text": theme.colors.secondary.dark,
+                                "--active-bg": theme.colors.background.nature,
+                                "--active-text": theme.colors.accent.dark,
                             }}
                         >
                             活動訊息

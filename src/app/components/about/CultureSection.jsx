@@ -3,6 +3,7 @@
 import { theme } from "@/styles/theme";
 import { motion } from "framer-motion";
 import SanitizedHtmlContent from "@/app/components/SanitizedHtmlContent";
+import {useEffect} from "react";
 
 export default function CultureSection({ data }) {
     return (
@@ -12,7 +13,7 @@ export default function CultureSection({ data }) {
                 background: theme.gradients.secondary,
             }}
         >
-            <div className="max-w-6xl mx-auto text-white">
+            <div className="max-w-6xl mx-auto text-gray-700">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -26,9 +27,9 @@ export default function CultureSection({ data }) {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-lg leading-relaxed max-w-3xl mb-12 text-white/90"
+                    className="text-lg leading-relaxed max-w-4xl mb-12 text-gray-700"
                 >
-                    <SanitizedHtmlContent html={data.content} color="text-white/90" />
+                    <SanitizedHtmlContent html={data.content} color="text-gray-700" />
                 </motion.div>
 
                 {/*<div className="grid grid-cols-1 md:grid-cols-2 gap-8">*/}

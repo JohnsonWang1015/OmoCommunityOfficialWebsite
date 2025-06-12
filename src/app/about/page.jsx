@@ -15,15 +15,11 @@ export default function AboutPage() {
         getPageContent("history")
             .then(data => setHistory(data))
             .catch(error => console.error("無法取得社區發展歷程資料:", error));
+        getPageContent("culture")
+            .then(data => setCulture(data))
+            .catch(error => console.error("無法取得社區文化特色資料:", error));
+
         setTimeout(() => {
-            setCulture({
-                title: "社區文化特色",
-                content: "以傳統與創新融合為精神...",
-                features: [
-                    { title: "黑翅鳶文化", description: "生態保育與文化導覽並重..." },
-                    { title: "農村再生", description: "推動在地友善農業與綠建築..." },
-                ],
-            });
             setTeam({
                 members: [
                     { name: "葉秋恆", role: "社區理事長", duty: "負責統籌社區業務。" },

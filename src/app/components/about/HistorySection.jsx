@@ -23,7 +23,7 @@ export default function HistorySection({ data }) {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-lg leading-relaxed whitespace-pre-line max-w-5xl mb-10"
                 >
-                    <SanitizedHtmlContent html={data.content} color="text-gray-900" />
+                    <SanitizedHtmlContent html={data.content} color="text-white/90" />
                 </motion.div>
 
                 {/*{data.image?.length > 0 && (*/}

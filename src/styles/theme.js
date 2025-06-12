@@ -1,44 +1,44 @@
 export const theme = {
     colors: {
         primary: {
-            // 琥珀金：社區代表色（溫暖）
-            main: "#F5A623",       // Amber Gold
-            light: "#FFD48A",      // 淺金色
-            dark: "#D9822B",       // 深琥珀
-            contrast: "#FFFFFF",   // 對比色
+            // 主色：深紫，穩重而有設計感
+            main: "#551B52",       // 葡萄深紫
+            light: "#7B4B7B",      // 藕紫
+            dark: "#3D123C",       // 暗紫
+            contrast: "#FFFFFF",   // 文字對比色
         },
         secondary: {
-            // 森林綠：代表永續與自然
-            main: "#2E7D4F",       // 中森林綠
-            light: "#81C784",      // 嫩芽綠
-            dark: "#1B5E20",       // 深森林
-            contrast: "#FFFFFF",   // 對比色
+            // 輔色：淡綠色，代表自然與溫潤
+            main: "#C4E1C0",       // 輕柔草綠
+            light: "#E2F3DC",      // 淺綠
+            dark: "#A2C6A1",       // 草本綠
+            contrast: "#263238",   // 文字對比色
         },
         accent: {
-            // 湖水藍：象徵透明、信任、科技
-            main: "#00B8D4",       // 湖水藍
-            light: "#4DD0E1",      // 淺水藍
-            dark: "#008394",       // 深藍綠
+            // 灰藍紫：內斂科技感
+            main: "#848793",       // 灰紫藍
+            light: "#A4A7B3",      // 淺灰紫
+            dark: "#666973",       // 深灰藍
             contrast: "#FFFFFF",
         },
         text: {
-            primary: "#263238",     // 暗藍灰，比純黑溫和
-            secondary: "#607D8B",   // 藍灰色，內文佳
+            primary: "#2C2C2C",     // 低飽和深灰，穩重可讀性高
+            secondary: "#555D66",   // 較淡的灰藍文字
             light: "#FFFFFF",
         },
         background: {
             main: "#FFFFFF",
-            light: "#F9FAFB",        // 簡約留白背景
-            warm: "#FFF8E1",         // 保留暖色可用於 hero
-            nature: "#E8F5E9",       // 淺綠背景，呼吸感
-            warmLight: "#FDFDF7",
+            light: "#F8F9FA",        // 留白主背景
+            warm: "#FDF9F5",         // 微米色調
+            nature: "#EEF5ED",       // 微綠灰背景
+            warmLight: "#FAF9F7",
         },
     },
     gradients: {
-        primary: "linear-gradient(135deg, #F5A623 0%, #FFD48A 100%)",
-        secondary: "linear-gradient(135deg, #2E7D4F 0%, #81C784 100%)",
-        accent: "linear-gradient(135deg, #00B8D4 0%, #4DD0E1 100%)",
-        hero: "linear-gradient(180deg, rgba(46, 125, 79, 0.9) 0%, rgba(27, 94, 32, 0.8) 100%)",
+        primary: "linear-gradient(135deg, #551B52 0%, #7B4B7B 100%)",
+        secondary: "linear-gradient(135deg, #C4E1C0 0%, #E2F3DC 100%)",
+        accent: "linear-gradient(135deg, #848793 0%, #A4A7B3 100%)",
+        hero: "linear-gradient(180deg, rgba(85, 27, 82, 0.9) 0%, rgba(61, 18, 60, 0.8) 100%)",
     },
     shadows: {
         small: "0 2px 4px rgba(0,0,0,0.08)",

@@ -30,7 +30,7 @@ export default function Footer() {
         <footer
             className="text-white relative scroll-mt-20"
             style={{
-                background: `linear-gradient(to right, ${theme.colors.secondary.main}, ${theme.colors.secondary.dark})`,
+                background: `linear-gradient(to right, ${theme.colors.primary.main}, ${theme.colors.primary.dark})`,
             }}
         >
             {/* 背景動畫 */}
@@ -40,7 +40,7 @@ export default function Footer() {
                 transition={{ duration: 2 }}
                 className="absolute inset-0"
                 style={{
-                    background: `linear-gradient(to right, ${theme.colors.secondary.main}, ${theme.colors.secondary.dark})`,
+                    background: `linear-gradient(to right, ${theme.colors.primary.main}, ${theme.colors.primary.dark})`,
                     mixBlendMode: "multiply",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",

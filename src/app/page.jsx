@@ -20,7 +20,7 @@ export default function HomePage() {
             <Navbar />
             <Hero />
             {/* 嵌入 YouTube 區塊 */}
-            <section className="py-16 px-4 md:px-8 bg-white/70 backdrop-blur-sm"
+            <section id="introVideo" className="py-16 px-4 md:px-8 bg-white/70 backdrop-blur-sm"
                      aria-label="社區介紹影片" role="region">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
@@ -48,7 +48,7 @@ export default function HomePage() {
             </section>
 
             {/* 社區公告區塊 */}
-            <section className="relative mt-8">
+            <section id="announcement" className="relative mt-8">
                 {/* 上方波浪形裝飾 */}
                 <div className="relative">
                     <div className="absolute top-[-40px] left-0 right-0 z-10">
@@ -70,7 +70,7 @@ export default function HomePage() {
                 <div
                     className="relative z-0 pt-8 pb-20 px-4 md:px-8"
                     style={{
-                        background: theme.colors.accent.main,
+                        background: theme.colors.secondary.main,
                     }}
                 >
                     <TabsSection />

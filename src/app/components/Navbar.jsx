@@ -9,8 +9,10 @@ import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-    { name: "檔案下載", href: "/downloads" },
+    { name: "最新消息", href: "/#announcement" },
     { name: "關於我們", href: "/about" },
+    { name: "檔案下載", href: "/downloads" },
+    { name: "介紹影片", href: "/#introVideo" },
 ];
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +36,7 @@ export default function Navbar() {
         <nav
             className="fixed w-full z-50 shadow-md"
             style={{
-                background: `linear-gradient(to right, ${theme.colors.secondary.main}CC, ${theme.colors.secondary.dark}CC)`,
+                background: `linear-gradient(to right, ${theme.colors.primary.main}CC, ${theme.colors.primary.dark}CC)`,
                 backdropFilter: "blur(8px)",
             }}
         >
@@ -49,8 +51,8 @@ export default function Navbar() {
                             src={"/images/logo.png"}
                             alt="塭內社區 Logo 圖"
                             className="h-8 md:h-12 w-auto img-fluid"
-                            width={150}
-                            height={50}
+                            width={130}
+                            height={30}
                             priority
                         />
                         <h1 className="text-white text-lg md:text-2xl font-bold hidden sm:block">
@@ -66,7 +68,7 @@ export default function Navbar() {
                                 href={item.href}
                                 className={`text-white text-base lg:text-lg transition-colors duration-300 relative group ${
                                     pathname === item.href
-                                        ? "font-bold text-yellow-300"
+                                        ? "font-bold text-white"
                                         : "hover:text-gray-300"
                                 }`}
                             >
