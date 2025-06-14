@@ -57,6 +57,12 @@ export default function Footer() {
                         className="space-y-4"
                     >
                         <h3 className="text-xl font-bold mb-6 text-primary-light">
+                            <Link href="#start-B"
+                                  title="下方內容區"
+                                  accessKey="B" c
+                                  lassName="mr-2">
+                                :::
+                            </Link>
                             聯絡資訊
                         </h3>
                         <div className="space-y-3">

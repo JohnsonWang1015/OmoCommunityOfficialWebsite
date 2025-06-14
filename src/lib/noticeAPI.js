@@ -3,7 +3,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BACKSTAGE_URL;
 export async function getAllNotices() {
     try {
         const response = await fetch(
-            `${BASE_URL}/api/v1/announcement`,
+            `${BASE_URL}/api/v1/announcement/published`,
             {
                 credentials: "include",
             }

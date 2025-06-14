@@ -35,14 +35,14 @@ export default function ArticleList() {
                 : textContent;
 
         return (
-            <p className="text-gray-700 leading-relaxed">
+            <div className="text-gray-700 leading-relaxed">
                 {shortened}
                 {textContent.length > maxLength && (
-                    <span className="font-medium text-accent-dark ml-2">
+                    <p className="font-medium text-accent-dark text-end mt-2">
                         了解更多 →
-                    </span>
+                    </p>
                 )}
-            </p>
+            </div>
         );
     };
 
@@ -54,7 +54,7 @@ export default function ArticleList() {
             }}
         >
             <div className="max-w-6xl mx-auto text-white">
-                <h2 className="text-4xl font-bold text-center mb-12">
+                <h2 className="text-4xl font-bold text-center mb-12 text-gray-600">
                     社區最新公告
                 </h2>
 
@@ -87,10 +87,6 @@ export default function ArticleList() {
                                     </div>
 
                                     {renderArticleExcerpt(article)}
-
-                                    <p className="font-medium text-primary-dark ml-2 text-end">
-                                        了解更多 →
-                                    </p>
                                 </Link>
                             </motion.div>
                         ))}

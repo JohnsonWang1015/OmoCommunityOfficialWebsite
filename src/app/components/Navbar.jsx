@@ -9,6 +9,7 @@ import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 
 const navItems = [
+    { name: ":::", href: "#start-U" },
     { name: "最新消息", href: "/#announcement" },
     { name: "關於我們", href: "/about" },
     { name: "檔案下載", href: "/downloads" },
@@ -64,6 +65,8 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
                         {navItems.map((item) => (
                             <Link
+                                title={item.name === ":::" ? "上方內容區" : item.name}
+                                accessKey={item.href.includes("#start-U") ? "U" : ""}
                                 key={item.name}
                                 href={item.href}
                                 className={`text-white text-base lg:text-lg transition-colors duration-300 relative group ${
@@ -80,8 +83,8 @@ export default function Navbar() {
                                         style={{
                                             background: `linear-gradient(to right, ${theme.colors.primary.main}, ${theme.colors.primary.dark})`,
                                         }}
-                                        initial={{ scaleX: 0 }}
-                                        whileHover={{ scaleX: 1 }}
+                                        initial={{scaleX: 0}}
+                                        whileHover={{scaleX: 1}}
                                         transition={{
                                             duration: 0.3,
                                             ease: "easeInOut",
@@ -136,7 +139,7 @@ export default function Navbar() {
                                         <Link
                                             key={item.name}
                                             href={item.href}
-                                            className="py-4 px-6 text-lg text-dark bg-white/80 hover:bg-white/20 transition-colors"
+                                            className="py-4 px-6 text-lg text-dark bg-white/90 hover:bg-white/20 transition-colors"
                                             onClick={() => setIsOpen(false)}
                                         >
                                             {item.name}
