@@ -3,36 +3,33 @@
 import { theme } from "@/styles/theme";
 import { useState, useEffect } from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { getAllFiles } from "@/lib/downloadFileAPI";
+import {mappingFileType} from "@/utils/mappingFileType";
 
 export default function DownloadsPage() {
     const [files, setFiles] = useState([]);
 
     useEffect(() => {
-        setFiles([
-            {
-                name: "社區報名表.docx",
-                url: "/files/registration.docx",
-                size: "1.2MB",
-                type: "Word 文件",
-            },
-            {
-                name: "活動場地圖.pdf",
-                url: "/files/map.pdf",
-                size: "820KB",
-                type: "PDF 圖檔",
-            },
-            {
-                name: "環保手冊.zip",
-                url: "/files/eco_guide.zip",
-                size: "3.4MB",
-                type: "ZIP 壓縮檔",
-            },
-        ]);
+        getAllFiles()
+            .then((data) => {
+                const formattedFiles = data.map((file) => ({
+                    ...file,
+                    fileType: mappingFileType(file.fileType),
+                    fileSize: `${(file.fileSize / 1024).toFixed(2) > 1024 
+                        ? (file.fileSize / (1024 * 1024)).toFixed(2) + " MB" 
+                        : (file.fileSize / 1024).toFixed(2) + " KB"}`,
+                }));
+                setFiles(formattedFiles);
+            })
+            .catch((error) => {
+                console.error("取得檔案列表失敗:", error);
+                setFiles([]);
+            });
     }, []);
 
     return (
         <section
-            className="pt-32 pb-22 px-4"
+            className="pt-35 pb-80 px-4"
             style={{
                 background: theme.gradients.accent,
             }}
@@ -51,20 +48,20 @@ export default function DownloadsPage() {
                             <div className="flex justify-between items-start">
                                 <div>
                                     <h2 className="text-xl font-bold mb-1">
-                                        {file.name}
+                                        {file.title}
                                     </h2>
                                     <p className="text-sm text-gray-500">
-                                        {file.type}・{file.size}
+                                        {file.fileType}・{file.fileSize}
                                     </p>
                                 </div>
 
                                 <a
                                     href={file.url}
                                     download
-                                    target="_blank"
+                                    target="_self"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-1 bg-accent-dark hover:bg-accent-light text-gray-800 px-4 py-2 rounded-full transition"
-                                    title={`下載 ${file.name}`}
+                                    title={`下載 ${file.filename}`}
                                 >
                                     <ArrowDownTrayIcon className="w-5 h-5" />
                                     下載

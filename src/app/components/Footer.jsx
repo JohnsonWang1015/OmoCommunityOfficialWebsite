@@ -59,8 +59,8 @@ export default function Footer() {
                         <h3 className="text-xl font-bold mb-6 text-primary-light">
                             <Link href="#start-B"
                                   title="下方內容區"
-                                  accessKey="B" c
-                                  lassName="mr-2">
+                                  accessKey="B"
+                                  className="mr-2">
                                 :::
                             </Link>
                             聯絡資訊

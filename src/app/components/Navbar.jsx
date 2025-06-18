@@ -52,7 +52,7 @@ export default function Navbar() {
                             src={"/images/logo.png"}
                             alt="塭內社區 Logo 圖"
                             className="h-8 md:h-12 w-auto img-fluid"
-                            width={130}
+                            width={100}
                             height={30}
                             priority
                         />
