@@ -1,34 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { theme } from "@/styles/theme";
 import {
     Accordion,
     AccordionItem,
     AccordionTrigger,
     AccordionContent,
-} from "../../components/ui/accordion";
-
-const qnaList = [
-    {
-        question: "塭內社區在哪裡？",
-        answer: "塭內社區位於台灣西部濱海地區，靠近紅樹林保護區。",
-    },
-    {
-        question: "導覽活動需要預約嗎？",
-        answer: "建議事先線上報名，以確保有足夠的名額與導覽人員。",
-    },
-    {
-        question: "有哪些適合親子的活動？",
-        answer: "推薦參加紫斑蝶生態觀察、手作工坊與文化導覽行程。",
-    },
-    {
-        question: "如何加入志工服務？",
-        answer: "可至社區網站填寫志工申請表，將有專人聯繫。",
-    },
-];
+} from "@/components/ui/accordion";
+import { useEffect, useState } from "react";
+import { getAllFaqs } from "@/lib/faqAPI";
 
 export default function QandASection() {
+    const [qnaList, setQnaList] = useState([]);
+
+    useEffect(() => {
+        getAllFaqs()
+            .then((faqs) => {
+                setQnaList(faqs);
+            })
+            .catch((error) => {
+                console.error("Error fetching FAQs:", error);
+            });
+    }, []);
+
     return (
         <section
             className="py-20 px-4 md:px-8"

@@ -77,7 +77,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <HighlightSection />
+            {/*<HighlightSection />*/}
             <QandASection />
             <Footer />
         </main>
