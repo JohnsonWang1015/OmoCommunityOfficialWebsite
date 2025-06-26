@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { useEffect, useState } from "react";
 import { getAllFaqs } from "@/lib/faqAPI";
+import SanitizedHtmlContent from "@/app/components/SanitizedHtmlContent";
 
 export default function QandASection() {
     const [qnaList, setQnaList] = useState([]);
@@ -46,10 +47,10 @@ export default function QandASection() {
                             className="border border-gray-200 rounded-lg bg-white shadow-sm"
                         >
                             <AccordionTrigger className="px-5 py-4 text-lg font-semibold text-secondary-dark hover:bg-secondary-light/10 transition-colors">
-                                {item.question}
+                                <SanitizedHtmlContent html={item.question} />
                             </AccordionTrigger>
                             <AccordionContent className="px-5 pb-4 text-gray-700 text-base">
-                                {item.answer}
+                                <SanitizedHtmlContent html={item.answer} />
                             </AccordionContent>
                         </AccordionItem>
                     ))}
