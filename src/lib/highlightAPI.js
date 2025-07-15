@@ -2,7 +2,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BACKSTAGE_URL;
 
 export async function getAllHighlights() {
     try {
-        const response = await fetch(`${BASE_URL}/api/v1/highlights`, {
+        const response = await fetch(`${BASE_URL}/api/v1/highlights/published`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
