@@ -25,6 +25,13 @@ export default function HighlightSection() {
         return temp?.textContent?.substring(0, maxLength) + "..." || "";
     };
 
+    const removeImagesFromHtml = (html) => {
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+        temp.querySelectorAll("img").forEach((img) => img.remove());
+        return temp.innerHTML;
+    };
+
     // const extractImages = (html) => {
     //     const div = document.createElement("div");
     //     div.innerHTML = DOMPurify.sanitize(html);
@@ -65,7 +72,7 @@ export default function HighlightSection() {
                                         <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
                                             {item.title}
                                         </h3>
-                                        <SanitizedHtmlContent html={item.content} color="text-gray-700" />
+                                        <SanitizedHtmlContent html={removeImagesFromHtml(item.content)} color="text-gray-700" />
                                     </div>
                                 </Link>
                             </motion.div>
