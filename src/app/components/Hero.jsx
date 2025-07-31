@@ -144,7 +144,7 @@ export default function Hero() {
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://promap.topedu.io:3000/"
+                            href="https://wennei.org:3000/"
                             className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
                         >
                             🌿 生態導覽
