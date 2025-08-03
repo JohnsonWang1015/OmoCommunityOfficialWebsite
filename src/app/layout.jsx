@@ -74,7 +74,6 @@ export default function RootLayout({ children }) {
     return (
         <html lang="zh-TW">
             <head>
-                <!-- Google tag (gtag.js) -->
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMXSZCD3SH"></script>
                 <script>
                     window.dataLayer = window.dataLayer || [];
