@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import HeadContent from "@/app/components/HeadContent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -74,23 +75,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="zh-TW">
             <head>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMXSZCD3SH"></script>
-                <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments)}
-                    gtag('js', new Date());
-
-                    gtag('config', 'G-LMXSZCD3SH');
-                </script>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        name: "塭內社區官方網站",
-                        url: "https://wennei.org/",
-                        logo: "https://wennei.org/images/logo.png",
-                    })
-                }} />
+                <HeadContent />
             </head>
             <body className={`${inter.className} antialiased text-gray-800`}>
                 <div id="top">{children}</div>
