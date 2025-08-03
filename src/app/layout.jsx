@@ -59,10 +59,6 @@ export const metadata = {
             "zh-TW": "https://wennei.org/",
         },
     },
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-        { media: "(prefers-color-scheme: dark)", color: "#000000" },
-    ],
 };
 
 export const viewport = {
@@ -78,6 +74,15 @@ export default function RootLayout({ children }) {
     return (
         <html lang="zh-TW">
             <head>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMXSZCD3SH"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments)}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-LMXSZCD3SH');
+                </script>
                 <script type="application/ld+json" dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
