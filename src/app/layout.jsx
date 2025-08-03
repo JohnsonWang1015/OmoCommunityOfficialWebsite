@@ -12,9 +12,13 @@ export const metadata = {
     applicationName: "塭內社區官方網站",
     description: "苗栗縣竹南鎮塭內社區官方網站，提供社區最新公告、生態導覽、文化活動、交通資訊與在地故事，邀您探索塭內之美。",
     icons: {
-        icon: "/images/logo.png",
-        shortcut: "/images/logo.png",
-        apple: "/images/logo.png",
+        icon: [
+            { url: "/favicon.ico", sizes: "any" },
+            { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+            { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+        ],
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
         other: {
             rel: "icon",
             url: "/images/logo.png",
