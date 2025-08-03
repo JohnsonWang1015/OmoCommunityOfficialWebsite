@@ -1,20 +1,12 @@
+import dynamic from "next/dynamic";
 import Script from "next/script";
+
+// 只在 Client 載入 GTM，避免 SSR 水合錯誤
+const GTMScripts = dynamic(() => import("./GTMScripts"), { ssr: false });
 
 export default function HeadContent() {
     return (
         <div>
-            <Script
-                src="https://www.googletagmanager.com/gtag/js?id=G-LMXSZCD3SH"
-                strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-LMXSZCD3SH');
-                `}
-            </Script>
             <Script
                 id="organization-jsonld"
                 type="application/ld+json"
@@ -29,6 +21,7 @@ export default function HeadContent() {
                     }),
                 }}
             />
+            <GTMScripts />
         </div>
     )
 }
