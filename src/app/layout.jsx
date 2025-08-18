@@ -4,7 +4,7 @@ import HeadContent from "@/app/components/HeadContent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    metadataBase: new URL("https://wennei.org/"),
+    metadataBase: new URL("https://www.wennei.org/"),
     title: {
         default: "塭內社區官方網站",
         template: "%s | 塭內社區官方網站",
@@ -35,7 +35,7 @@ export const metadata = {
         ],
         title: "塭內社區官方網站",
         description: "苗栗縣竹南鎮塭內社區官方網站，提供社區最新公告、生態導覽、文化活動、交通資訊與在地故事，邀您探索塭內之美。",
-        url: "https://wennei.org/",
+        url: "https://www.wennei.org/",
         siteName: "塭內社區官方網站",
         locale: "zh-TW",
         type: "website",
@@ -59,9 +59,9 @@ export const metadata = {
         creator: "@wennei",
     },
     alternates: {
-        canonical: "https://wennei.org/",
+        canonical: "https://www.wennei.org/",
         languages: {
-            "zh-TW": "https://wennei.org/",
+            "zh-TW": "https://www.wennei.org/",
         },
     },
 };
