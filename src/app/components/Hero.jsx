@@ -141,6 +141,16 @@ export default function Hero() {
                     )} */}
                     {/* CTA 按鈕 */}
                     <div className="absolute bottom-45 left-0 right-0 z-20 flex flex-col sm:flex-row justify-center gap-4 px-4">
+                        {/* 智慧農場按鈕 */}
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://iot.wennei.org/"
+                            className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
+                        >
+                            🌾 智慧農場
+                        </Link>
+                        {/* 生態導覽按鈕 */}
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
@@ -148,6 +158,15 @@ export default function Hero() {
                             className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
                         >
                             🌿 生態導覽
+                        </Link>
+                        {/* 互動式生態網站按鈕 */}
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://omo.wennei.org/species"
+                            className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
+                        >
+                            🐸 互動式生態網站
                         </Link>
                         {/*<Link*/}
                         {/*    href="/culture"*/}
