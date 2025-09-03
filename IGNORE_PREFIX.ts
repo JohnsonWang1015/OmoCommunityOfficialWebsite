@@ -1,0 +1,1 @@
+export const IGNORE_PREFIX = ["/_next", "/api", "/favicon", "/assets", "/static"];

@@ -8,6 +8,7 @@ import Hero from "@/app/components/Hero";
 import TabsSection from "@/app/components/TabsSection";
 import HighlightSection from "@/app/components/HighlightSection";
 import QandASection from "@/app/components/QandASection";
+import ViewCounter from "@/app/components/ViewCounter";
 
 export default function HomePage() {
     return (
@@ -79,6 +80,11 @@ export default function HomePage() {
 
             <HighlightSection />
             <QandASection />
+            <section className="px-4 md:px-8 -mt-4">
+                <div className="max-w-5xl mx-auto flex justify-end">
+                    <ViewCounter path={currentPath} />
+                </div>
+            </section>
             <Footer />
         </main>
     );
