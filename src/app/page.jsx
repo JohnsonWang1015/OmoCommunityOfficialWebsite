@@ -11,6 +11,7 @@ import QandASection from "@/app/components/QandASection";
 import ViewCounter from "@/app/components/ViewCounter";
 
 export default function HomePage() {
+    const currentPath = "/";
     return (
         <main
             className="min-h-screen flex flex-col"
