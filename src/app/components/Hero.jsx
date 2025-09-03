@@ -145,8 +145,8 @@ export default function Hero() {
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://iot.wennei.org/"
-                            className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
+                            href={process.env.NEXT_PUBLIC_IOT_URL}
+                            className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-yellow-500 to-yellow-700 hover:from-yellow-600 hover:to-yellow-700 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-400"
                         >
                             🌾 智慧農場
                         </Link>
@@ -154,7 +154,7 @@ export default function Hero() {
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://omo.wennei.org/"
+                            href={process.env.NEXT_PUBLIC_OMO_URL}
                             className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
                         >
                             🌿 生態導覽
@@ -163,10 +163,10 @@ export default function Hero() {
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://omo.wennei.org/species"
+                            href={process.env.NEXT_PUBLIC_ECO_URL}
                             className="px-12 py-3 text-lg text-center md:text-center font-bold text-white rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
                         >
-                            🐸 互動式生態網站
+                            🐸 生態網站
                         </Link>
                         {/*<Link*/}
                         {/*    href="/culture"*/}
