@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export default function HeadContent() {
     return (
-        <div>
+        <>
             {/* JSON-LD 保留在 SSR 渲染 */}
             <Script
                 id="organization-jsonld"
@@ -21,6 +21,6 @@ export default function HeadContent() {
                     }),
                 }}
             />
-        </div>
+        </>
     );
 }

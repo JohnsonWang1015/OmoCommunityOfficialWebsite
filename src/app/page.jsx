@@ -81,8 +81,8 @@ export default function HomePage() {
 
             <HighlightSection />
             <QandASection />
-            <section className="px-4 md:px-8 -mt-4">
-                <div className="max-w-5xl mx-auto flex justify-end">
+            <section className="px-4 md:px-8 pb-4">
+                <div className="max-w-5xl mx-auto flex justify-center">
                     <ViewCounter path={currentPath} />
                 </div>
             </section>

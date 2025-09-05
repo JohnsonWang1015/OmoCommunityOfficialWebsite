@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import HeadContent from "@/app/components/HeadContent";
 import GA from "@/app/components/GA";
+import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -83,7 +84,9 @@ export default function RootLayout({ children }) {
                 <HeadContent />
             </head>
             <body className={`${inter.className} antialiased text-gray-800`}>
-                <GA />
+                <Suspense fallback={null}>
+                    <GA />
+                </Suspense>
                 <div id="top">{children}</div>
             </body>
         </html>
